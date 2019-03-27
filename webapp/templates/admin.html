@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+{% block body %}
+{% if session['logged_in'] %} 
+<h2>Welcome to the Admin area.</h2>
+<p> You can now add a user</p>
+<a href="/adduser">Add User</a>
+<a href="/logout">Logout</a> 
+{% else %}
+<p>Error must be logged in to add a user account</p>
+{% endif %}
+{% endblock %}
